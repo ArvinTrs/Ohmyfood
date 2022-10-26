@@ -1,0 +1,228 @@
+*{box-sizing: border-box;}
+
+@mixin googleFonts($font){
+    @import url('https://fonts.googleapis.com/css2?family=#{$font}');
+}
+
+// Variables
+    // Couleurs Principales
+        $primaryColor: #9356DC;
+        $secondaryColor: #FF79DA;
+        $thirdColor: #99E2D0;
+
+    // Couleurs Neutres
+        $greyDark: #353535;
+        $greyMid: #dedede;
+        $greyBright: #f7f7f7;
+
+
+// Fonts Use
+@include googleFonts("Shrikhand");
+@include googleFonts ("Roboto:wght@900");
+@include googleFonts("Roboto");
+
+// placeholders
+
+%flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%shadowBox{
+    box-shadow: 2px 5px 10px 0px rgb(222, 222, 222)
+}
+
+
+/* Start GLOBAL */
+
+html{font-size: 62.5%;}
+
+body{
+    font-family: "Roboto";
+    font-size: 18px;
+
+    h1, h2, h3{
+        font-size: 24px;
+        font-weight: bolder;
+    }
+
+    a{
+        text-decoration: none; color: black;
+        font-size: 16px;
+    }
+
+    ul, ol{list-style-type: none;}
+
+    label{position:absolute ; left :-999px}
+
+    img{
+        width: 100%;
+    }
+
+}
+
+/* End GLOBAL */
+
+// Start Mobile Version - BODY
+    //  Start Header
+    
+    .header__back-btn{
+        display: none;
+    }
+    
+    .header__logo{
+        @extend %flexCenter;
+        
+        img{
+            width: 42%;
+            margin: 23px 0 12px 0;
+        }
+    }
+    
+    // End Header
+    
+    // Start Main
+        // Start enteteMain
+    
+        .enteteMain{
+            background-color: $greyBright;
+        }
+        
+        .enteteMain__loca {
+            background-color: $greyMid;
+            width: 100%;   
+            padding: 15px;
+
+            a{
+                @extend %flexCenter;
+                font-size: 16px;
+                color: $greyDark;
+                font-weight: 600;
+
+                    i{
+                        position: relative;
+                        right: 20px;
+                }
+            }
+        }
+        
+        .enteteMain__present{
+            @extend %flexCenter;
+            flex-flow: column wrap;
+            text-align: center;
+            h1{
+                margin: 35px 30px 0 30px;
+                font-weight: 900;
+            }
+
+            p{
+                color: #757575;
+            }
+
+            .enteteMain__btn{
+                border: none;
+                background-image: linear-gradient(to bottom, $secondaryColor, $primaryColor);
+                border-radius: 50px;
+                padding: 15px 20px;
+                margin-bottom: 50px;
+                color: white;
+            }
+        }
+
+        // End enteteMain
+
+        // Start article func
+            .func{
+                padding: 30px 20px 50px 20px;
+                h2{
+                    margin-bottom: 20px
+                }
+                .func__rules{
+                    @extend %flexCenter;
+                    flex-direction: column;
+                    }
+                }
+
+            .func__rules__step{
+                @extend %shadowBox;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-flow: row wrap;
+                width: 95%;
+                background-color: $greyBright;
+                margin-bottom: 20px;
+                border-radius: 25px;
+                &:last-child{
+                    background-color: #eee2ff;
+                    i{
+                        color: #9356DC;
+                    }
+                }
+                span{
+                    position: relative;
+                    top: 3px;
+                    right: 10px;
+                    background-color: $primaryColor;
+                    color: white;
+                    font-size: 14px;
+                    padding: 4px 8px;
+                    border-radius: 50%;
+                }
+
+                i{
+                    margin: 28px 20px;
+                    color: #757575;
+                }
+
+                p{
+                    font-size: 16px;
+                    font-weight: 800;
+                }
+            }
+
+        // End article func
+
+        // Start Section resto
+            .resto{
+                background-color: $greyBright;
+                padding: 30px 20px 50px 20px;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-between;
+                article{
+                    background-color: white;
+                    border-radius: 15px 15px 0 0;
+                    margin-bottom: 15px;
+                    height: 300px;
+                    a{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .resto__card_ill{
+                    height: 70%;
+                    img{
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: 10% 60%;
+                        border-radius: 15px 15px 0 0;
+                    }
+                }
+
+                .resto__card__info{
+                    height: 20%;
+                    #like{
+                        visibility: hidden;
+                    }
+                }
+
+            }
+
+        // End Section resto
+
+
+
+
