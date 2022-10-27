@@ -6,7 +6,7 @@
 * {
   box-sizing: border-box; }
 
-.header__logo, .enteteMain__loca a, .enteteMain__present, .func .func__rules {
+.header__logo, .enteteMain__loca, .enteteMain__present, .func .func__rules {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -41,9 +41,11 @@ body {
 .header__back-btn {
   display: none; }
 
-.header__logo img {
-  width: 42%;
-  margin: 23px 0 12px 0; }
+.header__logo a {
+  width: 42%; }
+  .header__logo a img {
+    width: 100%;
+    margin: 23px 0 12px 0; }
 
 .enteteMain {
   background-color: #f7f7f7; }
@@ -53,12 +55,14 @@ body {
   width: 100%;
   padding: 15px; }
   .enteteMain__loca a {
+    width: 45%;
     font-size: 16px;
     color: #353535;
-    font-weight: 600; }
+    font-weight: 600;
+    margin-left: 20px; }
     .enteteMain__loca a i {
       position: relative;
-      right: 20px; }
+      right: 10px; }
 
 .enteteMain__present {
   flex-flow: column wrap;
@@ -95,7 +99,8 @@ body {
   .func__rules__step:last-child {
     background-color: #eee2ff; }
     .func__rules__step:last-child i {
-      color: #9356DC; }
+      color: #9356DC;
+      margin-left: 8px; }
   .func__rules__step span {
     position: relative;
     top: 3px;
@@ -107,6 +112,7 @@ body {
     border-radius: 50%; }
   .func__rules__step i {
     margin: 28px 20px;
+    margin-left: 8px;
     color: #757575; }
   .func__rules__step p {
     font-size: 16px;
@@ -128,6 +134,10 @@ body {
     .resto article a {
       width: 100%;
       height: 100%; }
+    .resto article:nth-child(4) #popNew, .resto article:nth-child(5) #popNew {
+      display: none; }
+    .resto article:nth-child(3) img {
+      object-position: 50% 60%; }
   .resto .resto__card_ill {
     height: 70%;
     position: relative; }
@@ -151,13 +161,14 @@ body {
     font-size: 16px;
     display: flex;
     flex-flow: row wrap;
-    padding: 10px; }
+    padding: 10px 0 10px 14px; }
     .resto .resto__card__info div:first-child {
       width: 80%;
       margin: 5px 0 15px;
       flex-direction: column;
       justify-content: space-around; }
       .resto .resto__card__info div:first-child h3, .resto .resto__card__info div:first-child p {
+        line-height: 1.2em;
         font-size: 17px;
         margin: 0; }
     .resto .resto__card__info div:last-child {
@@ -178,11 +189,10 @@ footer {
   background-color: #353535; }
   footer .header__logo {
     justify-content: flex-start;
-    margin-left: 15px;
-    margin-bottom: 8px;
-    width: 65%;
     color: white; }
     footer .header__logo img {
+      width: 25%;
+      margin: 20px 0 8px 15px;
       filter: invert(1); }
   footer nav {
     margin-left: 15px;
@@ -195,7 +205,7 @@ footer {
       padding-left: 0;
       padding-bottom: 30px; }
       footer nav ul li {
-        margin-bottom: 3px; }
+        margin-bottom: 5px; }
         footer nav ul li i {
           font-size: 12px;
           margin-right: 5px; }
@@ -204,5 +214,7 @@ footer {
         footer nav ul li a {
           font-size: 14px;
           color: white; }
+          footer nav ul li a:hover {
+            text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */
