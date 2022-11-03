@@ -22,58 +22,85 @@
         </header>
 
         <main>
-            <section class="enteteMain">
+            <section class="enteteMain">                
                 <div class="enteteMain__loca">
                     <a href="#">
                         <i class="fa-solid fa-location-dot"></i> Paris, Belleville
                     </a>
                 </div>
-                <div class="enteteMain__present">
-                    <h1>Réservez le menu qui vous convient</h1>
-                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                    <a href="#" class="enteteMain__btn">
-                        Explorer nos restaurants
-                    </a>
+                <div class="enteteMain__box-present">
+    
+                    <div class="enteteMain__present">
+                        <h1>Réservez le menu qui vous convient</h1>
+                        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                        <a href="#" class="enteteMain__btn">
+                            Explorer nos restaurants
+                        </a>
+                    </div>
+                    
+                    <article class="func">
+                        <h2>Fonctionnement</h2>
+                        <div class="func__rules">
+                            <div class="func__rules__step">
+                                <span>1</span>
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                <p>Choisissez un restaurant</p>
+                            </div>
+                            <div class="func__rules__step">
+                                <span>2</span>
+                                <i class="fa-sharp fa-solid fa-list-ul"></i>
+                                <p>Composez votre menu</p>
+                            </div>
+                            <div class="func__rules__step">
+                                <span>3</span>
+                                <i class="fa-solid fa-store"></i>
+                                <p>Dégustez au restaurant</p>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-            </section>
 
-            <article class="func">
-                <h2>Fonctionnement</h2>
-                <div class="func__rules">
-                    <div class="func__rules__step">
-                        <span>1</span>
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <p>Choisissez un restaurant</p>
-                    </div>
-                    <div class="func__rules__step">
-                        <span>2</span>
-                        <i class="fa-sharp fa-solid fa-list-ul"></i>
-                        <p>Composez votre menu</p>
-                    </div>
-                    <div class="func__rules__step">
-                        <span>3</span>
-                        <i class="fa-solid fa-store"></i>
-                        <p>Dégustez au restaurant</p>
-                    </div>
-                </div>
-            </article>
+            </section>
 
             <section class="resto">
 
                 <h2>Restaurants</h2>
 
-                <article class="resto__card">
-                    <a href="#">
-                        <div class="resto__card_ill">
-                            <img src="img/restaurants/la_palette_du_goût.jpg" alt="Assiète à table jolie présentation de poisson et légumes">
-                            <div id="popNew">Nouveau</div>
-                        </div>
-                        <div class="resto__card__info">
-                            <div>
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
+                <div class="resto__sectionCard">
+                    <article class="resto__card item1">
+                        <a href="#">
+                            <div class="resto__card_ill">
+                                <img src="img/restaurants/la_palette_du_goût.jpg" alt="Assiète à table jolie présentation de poisson et légumes">
+                                <div id="popNew">Nouveau</div>
                             </div>
-                            <div>
+                            <div class="resto__card__info">
+                                <div>
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                </div>
+                                <div>
+                                    <form action="post">
+                                        <input type="checkbox" name="like" id="like">
+                                        <label for="like">Favoris</label>
+                                        <button>
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="resto__card item2">
+                        <a href="#">
+                            <div class="resto__card_ill">
+                                <img src="img/restaurants/la_note_enchantée.jpg" alt="Plats poulet, patate et assortiments d'olives">
+                                <div id="popNew">Nouveau</div>
+                            </div>
+                            <div class="resto__card__info">
+                                <div>
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>
+                                </div>
                                 <form action="post">
                                     <input type="checkbox" name="like" id="like">
                                     <label for="like">Favoris</label>
@@ -82,72 +109,51 @@
                                     </button>
                                 </form>
                             </div>
-                        </div>
-                    </a>
-                </article>
-                <article class="resto__card boxShadow">
-                    <a href="">
-                        <div class="resto__card_ill">
-                            <img src="img/restaurants/la_note_enchantée.jpg" alt="Plats poulet, patate et assortiments d'olives">
-                            <div id="popNew">Nouveau</div>
-                        </div>
-                        <div class="resto__card__info">
-                            <div>
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p>
+                        </a>
+                    </article>
+                    <article class="resto__card item3">
+                        <a href="#">
+                            <div class="resto__card_ill">
+                                <img src="img/restaurants/à_la_française.jpg" alt="PLats gastronomique">
+                                <div id="popNew">Nouveau</div>
                             </div>
-                            <form action="post">
-                                <input type="checkbox" name="like" id="like">
-                                <label for="like">Favoris</label>
-                                <button>
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
-                <article class="resto__card boxShadow">
-                    <a href="#">
-                        <div class="resto__card_ill">
-                            <img src="img/restaurants/à_la_française.jpg" alt="PLats gastronomique">
-                            <div id="popNew">Nouveau</div>
-                        </div>
-                        <div class="resto__card__info">
-                            <div>
-                                <h3>À la française</h3>
-                                <p>Cité Rouge</p>
+                            <div class="resto__card__info">
+                                <div>
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p>
+                                </div>
+                                <form action="post">
+                                    <input type="checkbox" name="like" id="like">
+                                    <label for="like">Favoris</label>
+                                    <button>
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </form>
                             </div>
-                            <form action="post">
-                                <input type="checkbox" name="like" id="like">
-                                <label for="like">Favoris</label>
-                                <button>
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
-                <article class="resto__card boxShadow">
-                    <a href="index.html">
-                        <div class="resto__card_ill">
-                            <img src="img/restaurants/le_délice_des_sens.jpg" alt="plateau de poisson avec sauce onctueuse">
-                            <div id="popNew">Nouveau</div>
-                        </div>
-                        <div class="resto__card__info">
-                            <div>
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
+                        </a>
+                    </article>
+                    <article class="resto__card item4">
+                        <a href="index.html">
+                            <div class="resto__card_ill">
+                                <img src="img/restaurants/le_délice_des_sens.jpg" alt="plateau de poisson avec sauce onctueuse">
+                                <div id="popNew">Nouveau</div>
                             </div>
-                            <form action="post">
-                                <input type="checkbox" name="like" id="like">
-                                <label for="like">Favoris</label>
-                                <button>
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </a>
-                </article>
+                            <div class="resto__card__info">
+                                <div>
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                </div>
+                                <form action="post">
+                                    <input type="checkbox" name="like" id="like">
+                                    <label for="like">Favoris</label>
+                                    <button>
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </a>
+                    </article>
+                </div>    
             </section>
         </main>
 

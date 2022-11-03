@@ -42,7 +42,7 @@
 // placeholders
 
 %shadowBox{
-    box-shadow: 2px 5px 10px 0px rgb(222, 222, 222)
+    box-shadow: 2px 5px 10px 0px rgb(222, 222, 222);
 }
 
 
@@ -52,10 +52,10 @@ html{font-size: 62.5%;}
 
 body{
     font-family: "Roboto";
-    font-size: 18px;
+    font-size: 5vw;
 
     h1, h2, h3{
-        font-size: 24px;
+        font-size: 6vw;
         font-weight: 800;
         margin: 0;
     }
@@ -63,12 +63,12 @@ body{
     a{
         text-decoration: none;
         color: black;
-        font-size: 16px;
+        font-size: 80%;
     }
 
     ul, ol{list-style-type: none;}
 
-    label{position:absolute ; left :-999px}
+    label{position:absolute ; left :-1999px}
 
     img{
         width: 100%;
@@ -103,8 +103,8 @@ body{
         background-color: $greyBright;
     }
 
-    .enteteMain__loca {
-       @include baseFlexB(row wrap,center, center);
+    .enteteMain__loca{
+       @include baseFlexB(row wrap, center, center);
         box-shadow: inset 5px 15px 6px -14px #a0a0a0;
         background-color: $greyMid;
         width: 100%;
@@ -125,7 +125,6 @@ body{
     
     .enteteMain__present{
         @include baseFlexB(column wrap, center, center);
-        flex-flow: column wrap;
         text-align: center;
         h1{
             margin: 35px 30px 0 30px;
@@ -133,6 +132,7 @@ body{
         }
         
         p{
+            margin: 18px 15px;
             color: #757575;
         }
         
@@ -207,148 +207,325 @@ body{
             .resto{
                 background-color: $greyBright;
                 padding: 30px 20px 50px 20px;
-                display: flex;
-                flex-flow: column wrap;
-                justify-content: space-between;
+                @include baseFlexB (column nowrap, space-between, flex-start);
+
                 h2{
                     margin: 25px 0 18px 0;
                 }
-                article{
-                    @extend %shadowBox;
-                    background-color: white;
-                    border-radius: 15px;
-                    margin-bottom: 17px;
-                    height: 240px;
-                    a{
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                    &:nth-child(4), &:nth-child(5){
-                        #popNew{
-                            display: none;
-                        }
-                    }
-                    &:nth-child(3){ 
-                        img{
-                            object-position: 50% 60%;
-                        }
-                    }
-                }
-
-
-                .resto__card_ill{
-                    height: 70%;
-                    position: relative;
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        object-position: bottom;
-                        border-radius: 15px 15px 0 0;
-                    }
-
-                    
-                    #popNew{
-                        border-radius: 2px;
-                        background-color: #99E2D0;
-                        color: #07916e;
-                        font-size: 14px;
-                        font-weight: 500;
-                        padding: 7px 11px;
-                        position: absolute;
-                        bottom: 75.5%;
-                        left: 72%;
-                    }
-                }
                 
-                .resto__card__info{
-                    height: 30%;
-                    font-size: 16px;
-                    display: flex;
-                    flex-flow: row wrap;
-                    padding: 10px 0 10px 14px;
-                    div:first-child{
-                        width: 80%;
-                        margin: 5px 0 15px ;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        
-                        h3, p{
-                            line-height: 1.2em;
-                            font-size: 17px;
-                            margin: 0;
+                .resto__sectionCard{
+                    width: 100%;
+
+                    article{
+                        @extend %shadowBox;
+                        background-color: white;
+                        border-radius: 15px;
+                        margin-bottom: 17px;
+                        height: 240px;
+                        a{
+                            width: 100%; 
+                            height: 100%;
+                        }
+    
+                        &:nth-child(2){
+                            img{
+                                object-position: 50% 60%;
+                            }
+                        }
+
+                        &:nth-child(3){
+                            #popNew{
+                                display: none;
+                            }
+                        }
+
+                        &:nth-child(4){
+                            #popNew{
+                                display: none;
+                            }
+                        }
+
+                        .resto__card_ill{
+                            height: 70%;
+                            position: relative;
+                            @include baseFlexB(column wrap, flex-start, flex-end);
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: bottom;
+                                border-radius: 15px 15px 0 0;
+                            }
+                            
+                            #popNew{
+                                width: 77px;
+                                border-radius: 2px;
+                                background-color: #99E2D0;
+                                color: #07916e;
+                                font-size: 14px;
+                                font-weight: 500;
+                                padding: 7px 11px;
+                                margin-top: 15px;
+                                margin-right: 15px;
+                                position: absolute;
+                                
+                            }
                         }
                         
-                    }
-                    div:last-child{
-                        width: 20%;
-                    }
-
-                    #like{
-                        visibility: hidden;
-                    }
-                    
-                    button {
-                        transform: scale(1, 1.2);
-                        background-color: #ffffff;
-                        border: 1px solid #ffffff;
-                        color: rgb(0, 0, 0);
-                        font-weight: 50;
-                        font-size: 20px;
-                        position: relative;
-                        top: 8px;
+                        .resto__card__info{
+                            position: relative;
+                            height: 30%;
+                            font-size: 16px;
+                            @include baseFlexB (row wrap, flex-start, center);
+                            padding: 10px 0 10px 14px;
+                            div:first-child{
+                                width: 80%;
+                                margin: 5px 0 15px ;
+                                @include baseFlexB(column wrap, space-around, flex-start);
+                                flex-direction: column;
+                                justify-content: space-around;
+                                
+                                h3, p{
+                                    line-height: 1.2em;
+                                    font-size: 17px;
+                                    margin: 0;
+                                }
+                                
+                            }
+        
+                            #like{
+                                visibility: hidden;
+                                margin: 15px;
+                            }
+                            
+                            button {
+                                transform: scale(1, 1.2);
+                                background-color: #ffffff;
+                                border: 1px solid #ffffff;
+                                color: rgb(0, 0, 0);
+                                font-weight: 50;
+                                font-size: 20px;
+                                position: absolute;
+                                right: 20px;
+                            }
+                        }
                     }
                 }
             }
 
         // End Section resto
 
-        // Start Footer
+// Start Footer
+
+footer{
+    background-color: #353535;
+    .header__logo{
+        justify-content: flex-start;
+        color: white;
+        img{
+            width: 25%;
+            margin: 20px 0 8px 15px;
+            filter: invert(1);
+        }
+    }
+    
+    nav{
+        margin-left: 15px;
+        color: white;
+        ul{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            margin: 0;
+            padding-left: 0;
+            padding-bottom: 30px;
+            li{
+                margin-bottom: 5px;
+                i{
+                    font-size: 4vw;
+                    margin-right: 5px;
+                }
+                .fa-handshake-angle{margin: 0;}
+
+                a{
+                    font-size: 3.5vw;
+                    color: white;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Footer
+
+// Start Breakpoint Ajust Responsive Mobile
+
+@media only screen and (min-width : 425px) {
+
+//Start GLOBAL Ajust
+    body{
+        background-color: #220b7e47;
+        font-size: 16px;
+
+        h1,h2,h3{
+            font-size: 25px;
+        }
+    }
+//End GLOBAL Ajust
+
+//Start Main Ajust
+
+
+    .enteteMain{
+        .enteteMain__btn{
+            font-size: inherit;
+        }
+    }
+
+    .resto{
+        .resto__sectionCard{
+            article{
+                .resto__card_ill{
+                    img{
+                        object-position: 50% 70%;
+                    }
+                }
+            }
+        }
+    }
+
+// End Main Ajust
+
+//Start Footer Ajust
+
+    footer{
+        nav{
+            ul{
+                li{
+                    i{
+                        font-size: 16px;
+                    }
+
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Breakpoint Ajust Responsive Mobile
+
+// Start Responsive Tablette
+    @media only screen and (min-width : 605px) {
+        body{
+            background-color: #ffffff;
+        }
+        
+        .header__logo{
+            @include baseFlexB(row wrap,center, center);
+            a{
+                width: 350px;
+                img{
+                    width: 100%;
+                    margin: 23px 0 12px 0;
+                }
+            }
+        }
+
+        .resto{
+            .resto__sectionCard{
+                @include baseFlexB(row wrap, flex-start, baseline);
+               /* justify-content: ;*/
+               gap: 2vw;
+               article{
+                    margin: 0 0;
+                    width: 48.9%;
+                }
+            }
+        }
 
         footer{
-            background-color: #353535;
             .header__logo{
-                justify-content: flex-start;
-                color: white;
                 img{
-                    width: 25%;
-                    margin: 20px 0 8px 15px;
-                    filter: invert(1);
+                    width: 153px;
                 }
-                }
-            nav{
-                margin-left: 15px;
-                color: white;
-                ul{
-                    display: flex;
-                    flex-flow: column wrap;
-                    justify-content: space-between;
-                    margin: 0;
-                    padding-left: 0;
-                    padding-bottom: 30px;
-                    li{
-                        margin-bottom: 5px;
-                        i{
-                            font-size: 12px;
-                            margin-right: 5px;
-                        }
-                        .fa-handshake-angle{margin: 0;}
+            }
+        }
+    }
+    
+@media only screen and (min-width : 881px) {
 
-                        a{
+        // Start Desktop Version
+        // Start Header
+        
+        .header__logo{
+            a{
+                /* width: 42%;*/
+                img{
+                    /*  width: 100%;*/
+                    margin: 23px 0 12px 23px;
+                }
+            }
+        }
+        // End Header
+
+        // Start Main
+        
+        .enteteMain__box-present{
+            @include baseFlexB(row wrap, center, center);
+            margin: 40px 30px 0;
+            gap: 30px;
+            .enteteMain__present{
+                h1{
+                    font-size: 25px;
+                }
+                a{
+                    font-size: 16px;
+                }
+                box-shadow: 2px 5px 10px 0px rgb(222, 222, 222);
+                border-radius: 25px;
+                width: 60%;
+                height: 365px;
+                background-color: white;
+            }
+            .func{
+              /*  flex: 1;*/
+                box-shadow: 2px 5px 10px 0px rgb(222, 222, 222);
+                border-radius: 25px;
+                width: 35%;
+                padding-bottom: 10px ;
+                background-color: white;
+                .func__rules{
+                    width: 100%;
+                    font-size: 16px;
+                    .func__rules__step{
+                        p{
                             font-size: 14px;
-                            color: white;
-                            &:hover{
-                                text-decoration: underline;
-                            }
                         }
                     }
                 }
             }
         }
-        
-        // End Footer
+
+        .resto{
+            padding: 0 30px 30px;
+            .resto__sectionCard{
+                article{
+                    height: 400px;
+                }
+            }
+        }
+
+        // End Main
+
+            //End Desktop Responsive
+}
 
 
-
-
+    
+    
