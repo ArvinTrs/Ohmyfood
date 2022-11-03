@@ -440,7 +440,7 @@ footer{
         .resto{
             .resto__sectionCard{
                 @include baseFlexB(row wrap, flex-start, baseline);
-               /* justify-content: ;*/
+
                gap: 2vw;
                article{
                     margin: 0 0;
@@ -464,14 +464,11 @@ footer{
         // Start Header
         
         .header__logo{
-            a{
-                /* width: 42%;*/
                 img{
-                    /*  width: 100%;*/
                     margin: 23px 0 12px 23px;
                 }
             }
-        }
+        
         // End Header
 
         // Start Main
@@ -494,7 +491,6 @@ footer{
                 background-color: white;
             }
             .func{
-              /*  flex: 1;*/
                 box-shadow: 2px 5px 10px 0px rgb(222, 222, 222);
                 border-radius: 25px;
                 width: 35%;

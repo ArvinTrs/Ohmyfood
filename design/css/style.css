@@ -291,7 +291,6 @@ footer {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: baseline;
-    /* justify-content: ;*/
     gap: 2vw; }
     .resto .resto__sectionCard article {
       margin: 0 0;
@@ -300,11 +299,8 @@ footer {
   footer .header__logo img {
     width: 153px; } }
 @media only screen and (min-width: 881px) {
-  .header__logo a {
-    /* width: 42%;*/ }
-    .header__logo a img {
-      /*  width: 100%;*/
-      margin: 23px 0 12px 23px; }
+  .header__logo img {
+    margin: 23px 0 12px 23px; }
 
   .enteteMain__box-present {
     display: flex;
@@ -324,7 +320,6 @@ footer {
       .enteteMain__box-present .enteteMain__present a {
         font-size: 16px; }
     .enteteMain__box-present .func {
-      /*  flex: 1;*/
       box-shadow: 2px 5px 10px 0px #dedede;
       border-radius: 25px;
       width: 35%;
