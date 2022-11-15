@@ -5,156 +5,167 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="design/css/normalize.css">
-    <link rel="stylesheet" href="design/css/style_menu.css">
+    <link rel="stylesheet" href="design/css/style_menu1.css">
     <script src="https://kit.fontawesome.com/ed02f4a770.js" crossorigin="anonymous"></script>
     <title>Ohmyfood!</title>
 </head>
 <body>
     <header>
-        <a href="index.html" class="header__back-btn">
-            <i class="fa-solid fa-arrow-left"></i>
-        </a> 
-        <div class="header__logo">
-            <a href="index.html">
-                <img src="img/logo/logo_omf.png" alt="Logo de l'entreprise Ohmyfood!">
-            </a>
+        <div class="header-block">
+            <a href="index.html" class="header-block__back-btn">
+                <i class="fa-sharp fa-solid fa-arrow-left"></i>
+            </a> 
+            <div class="header-block__logo">
+                <a href="index.html">
+                    <img src="img/logo/logo_omf.png" alt="Logo de l'entreprise Ohmyfood!">
+                </a>
+            </div>
         </div>
+        <div class="header__imgResto"></div>
     </header>
 
     <main>
-        <div class="imgResto">
-            <img src="/img/restaurants/à_la_française.jpg" alt="assiète gastronomique">
-        </div>
         <section class="sectionMenu">
             <div class="sectionMenu__entete">
                 <h1>À la française</h1>
                 <i class="fa-regular fa-heart"></i>
             </div>
 
-            <form method="post" action="traitement.php">
- 
-                <fieldset>
-                    <legend>ENTRÉES</legend> 
+            <form>
+                <div class="form__block">
+                    <fieldset>
+                        <legend>Entrées</legend> 
+                        <div class="underline"></div>
+                        
+                        
+                        <div class="fieldset__card">
+                            <label for="starter1">Starter1</label>
+                            <input type="checkbox" name="starter1" id="starter1">
+                            <div>
+                                <h2>Tartare de poulpe acidulé</h2>
+                                <p>Aux zestes d'orange <span>25€</span></p>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="fieldset__card">
+                            <label for="starter2">Starter2</label>
+                            <input type="checkbox" name="starter2" id="starter2">
+                            <div>
+                                <h2>Velouté de légumes d'antan</h2>
+                                <p>Carotte, panais, topinambour <span>35€</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="fieldset__card">
+                            <label for="starter3">Starter3</label>
+                            <input type="checkbox" name="starter3" id="starter3">
+                            <div>
+                                <h2>Soupe à l'oignon</h2>
+                                <p>Revisitée <span>20€</span></p>
+                            </div>
+                        </div>
+
+                    </fieldset>
                     
-
-                    <div>
-                        <label for="starter1">
-                        </label>
-                        <input type="checkbox" name="starter1" id="starter1">
-                        <h2>Tartare de poulpe acidulé</h2>
-                        <p>Aux zestes d'orange</p>
-                        <p>25€</p>
-                    </div>
-
+                    <fieldset>
+                        <legend>Plats</legend> 
+                        <div class="underline"></div>
+                        
+                        <div class="fieldset__card">
+                            <label for="dish1">Plat1</label>
+                            <input type="checkbox" name="dish1" id="dish1">
+                            <div>
+                                <h2>Coquilles Saint-Jacques</h2>
+                                <p>Accompagnées d'une purée de panais <span>40€</span></p>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="fieldset__card">
+                            <label for="dish2">Plat2</label>
+                            <input type="checkbox" name="dish2" id="dish2">
+                            <div>
+                                <h2>Magret de canard</h2>
+                                <p>Et parmentier de pommes de terre <span>35€</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="fieldset__card">
+                            <label for="dish3">Plat3</label>
+                            <input type="checkbox" name="dish3" id="dish3">
+                            <div>
+                                <h2>Pigeonneau d'Ille-et-vilaine</h2>
+                                <p>Sur son lit de gnocchis aux légumes <span>20€</span></p>
+                            </div>
+                        </div>        
+                        
+                    </fieldset>
                     
-                    <div>
-                        <label for="starter2">Entrée 2</label>
-                        <input type="checkbox" name="starter2" id="starter2">
-                        <h2>Velouté de légumes d'antan</h2>
-                        <p>Carotte, panais, topinambour</p>
-                        <p>35€</p> 
-                    </div>
-
-                    <div>
-                        <label for="starter3">Entrée 3</label>
-                        <input type="checkbox" name="starter3" id="starter3">
-                        <h2>Soupe à l'oignon</h2>
-                        <p>Revisitée</p>
-                        <p>20€</p>
-                    </div>
-             
-                </fieldset>
-
-                <fieldset>
-                    <legend>PLATS</legend> 
-             
-                    <div>
-                        <label for="dish1">Plats 1</label>
-                        <input type="checkbox" name="dish1" id="dish1">
-                        <h2>Coquilles Saint-Jacques</h2>
-                        <p>Accompagnées d'une purée de panais</p>
-                        <p>40€</p>    
-                    </div>
-
-                    <div>
-                        <label for="dish2">Plats 2</label>
-                        <input type="checkbox" name="dish2" id="dish2">
-                        <h2>Magret de canard</h2>
-                        <p>Et parmentier de pommes de terre</p>
-                        <p>35€</p>
-                    </div>
-
-                    <div>
-                        <label for="dish3">Plats 3</label>
-                        <input type="checkbox" name="dish3" id="dish3">
-                        <h2>Pigeonneau d'Ille-et-vilaine</h2>
-                        <p>Sur son lit de gnocchis aux légumes</p>
-                        <p>20€</p>
-                    </div>
-                
-             
-                </fieldset>
-                
-
-                <fieldset>
-                    <legend>DESSERTS</legend> 
-             
-                    <div>
-                        <label for="dessert1">
-                        </label>
-                        <input type="checkbox" name="dessert1" id="dessert1">
-                        <h2>Pétales de violettes glacés</h2>
-                        <p>Et purée de noisettes</p>
-                        <p>18€</p>
-                    </div>
                     
-                    <div>
-                        <label for="dessert2"></label>
-                        <input type="checkbox" name="dessert2" id="dessert2">
-                        <h2>Fondant au chocolat</h2>
-                        <p>Revisité</p>
-                        <p>22€</p>
-                    </div>
+                    <fieldset>
+                        <legend>Dessert</legend> 
+                        <div class="underline"></div>
+                        
+                        <div class="fieldset__card">
+                            <label for="dessert1">Dessert1</label>
+                            <input type="checkbox" name="dessert1" id="dessert1">
+                            <div>
+                                <h2>Pétales de violettes glacés</h2>
+                                <p>Et purée de noisettes <span>18€</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="fieldset__card">
+                            <label for="dessert2">Dessert2</label>
+                            <input type="checkbox" name="dessert2" id="dessert2">
+                            <div>
+                                <h2>Fondant au chocolat</h2>
+                                <p>Revisité <span>22€</span></p>
+                            </div>
+                        </div>
 
-                    <div>       
-                        <label for="dessert3"></label>
-                        <input type="checkbox" name="dessert3" id="dessert3">
-                        <h2>Millefeuille croustillant</h2>
-                        <p>Myrtilles et pâte d'amande</p>
-                        <p>23€</p>   
-                    </div>
-                    
-                </fieldset>
-
-                <button>Commander</button>
-
-             </form>
-             
-            </section>
-        </main>
+                        <div class="fieldset__card">
+                            <label for="dessert3">Dessert3</label>
+                            <input type="checkbox" name="dessert3" id="dessert3">
+                            <div>
+                                <h2>Millefeuille croustillant</h2>
+                                <p>Myrtilles et pâte d'amande <span>23€</span></p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="commander">
+                    <button>Commander</button>
+                </div>
+            </form>
+        </section>
+    </main>
         
     <footer>
-        <div class="header__logo">
-            <img src="img/logo/logo_omf.png" alt="Logo Ohmyfood!">
+        <div class="footer__block">
+            <div class="header__logo">
+                <img src="img/logo/logo_omf.png" alt="Logo Ohmyfood!">
+            </div>
+            <nav>  
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-utensils"></i>
+                        <a href="#"> Proposer un restaurant</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-handshake-angle"></i>
+                        <a href="#">Devenir partenaire</a>
+                    </li>
+                    <li>
+                        <a href="#">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="mailto:ohmyfood@contact.fr">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>  
-            <ul>
-                <li>
-                    <i class="fa-solid fa-utensils"></i>
-                    <a href=""> Proposer un restaurant</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    <a href="">Devenir partenaire</a>
-                </li>
-                <li>
-                    <a href="">Mentions légales</a>
-                </li>
-                <li>
-                    <a href="mailto:">Contact</a>
-                </li>
-            </ul>
-        </nav>
     </footer>
 </body>
 </html>
