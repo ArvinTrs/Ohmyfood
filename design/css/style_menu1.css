@@ -43,33 +43,27 @@ header {
 .header-block {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  /*  margin-left: 8%;*/ }
+  position: relative; }
   .header-block .header-block__back-btn {
-    width: 10%;
-    font-size: 30px;
+    font-size: 25px;
     color: #353535;
-    margin: 10px 20px 0 20px; }
+    margin: 10px 20px 0 20px;
+    position: absolute;
+    left: 5px;
+    top: 30%; }
 
-.header-block__logo {
-  width: 76%;
-  text-align: start;
-  /* @include baseFlexB(row wrap,center, center);
-   position: relative;*/ }
-  .header-block__logo a img {
-    width: 200px;
-    margin: 30px 0 18px 0; }
+.header-block__logo a img {
+  width: 200px;
+  margin: 30px 0 18px 0; }
 
 .header__imgResto {
   width: 100%;
-  height: 400px;
+  height: 280px;
   background-image: url(../../img/restaurants/à_la_française.jpg);
   background-size: cover;
-  background-position: 35%;
-  background-repeat: no-repeat;
-  z-index: -1;
-  overflow: hidden; }
+  background-position: 35%; }
 
 main {
   background-color: #f7f7f7;
@@ -77,8 +71,6 @@ main {
   margin-top: -57px;
   padding: 50px 18px 30px 18px;
   z-index: 1; }
-  main h2 {
-    font-size: 1.5em; }
 
 .sectionMenu .sectionMenu__entete {
   display: flex;
@@ -117,28 +109,35 @@ main {
       flex-flow: row wrap;
       justify-content: space-between;
       align-items: center;
+      width: 100%;
       border-radius: 25px;
       margin: 17px 0;
       background-color: white;
-      font-size: 20px; }
-      .sectionMenu .form__block fieldset .fieldset__card div {
-        margin: 18px;
-        width: 100%; }
-        .sectionMenu .form__block fieldset .fieldset__card div h2 {
-          font-size: 20px;
+      font-size: 18px; }
+      .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__infos {
+        margin: 18px 0 18px 18px;
+        width: 65vw;
+        white-space: nowrap;
+        overflow: hidden; }
+        .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__infos h2 {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: 18px;
           margin-bottom: 10px; }
-        .sectionMenu .form__block fieldset .fieldset__card div p {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: space-between;
-          align-items: none;
+        .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__infos p {
+          text-overflow: ellipsis;
+          overflow: hidden;
           margin: 0;
           width: 100%;
           color: #353535;
-          font-size: 18px; }
-          .sectionMenu .form__block fieldset .fieldset__card div p span {
-            font-weight: 600;
-            margin-right: 15px; }
+          font-size: 16px; }
+      .sectionMenu .form__block fieldset .fieldset__card .price {
+        color: #353535;
+        /* width: 10%;*/
+        font-size: 17px;
+        font-weight: 600;
+        margin: 37px 15px 0 0;
+        margin-right: 15px; }
 .sectionMenu .commander {
   display: flex;
   flex-flow: row wrap;
@@ -165,12 +164,8 @@ main {
 
 footer {
   width: 100%;
-  padding: 35px;
+  padding: 25px;
   background-color: #353535;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
   padding: auto; }
   footer .footer__block {
     display: flex;
@@ -181,10 +176,9 @@ footer {
       justify-content: flex-start;
       color: white; }
       footer .footer__block .header__logo img {
-        width: 28%;
+        width: 110px;
         filter: invert(1); }
     footer .footer__block nav {
-      margin-top: 20px;
       color: white; }
       footer .footer__block nav ul {
         display: flex;
@@ -203,10 +197,23 @@ footer {
               text-decoration: underline; }
 
 @media only screen and (min-width: 768px) {
+  .header__imgResto {
+    border-radius: 0 0 32px 32px; }
+
   main {
     margin: -42px auto;
-    width: 80%; } }
+    width: 80%; }
+
+  footer .footer__block {
+    width: 84%;
+    margin: auto; }
+    footer .footer__block .header__logo img {
+      width: 150px; } }
 @media only screen and (min-width: 992px) {
+  .header__imgResto {
+    border-radius: 0 0 32px 32px;
+    height: 485px; }
+
   main {
     margin: -42px auto; }
 
@@ -220,17 +227,20 @@ footer {
       justify-content: space-evenly;
       align-items: flex-start; }
       .sectionMenu form .form__block fieldset {
-        width: 30%; }
+        width: 30%;
+        /*  .fieldset__card{
+               width: 100%;
+               font-size: 14px; 
+               div{
+                   margin: 18px;
+                   width: 100%;
+                   h2{
+                       font-size: 14px;
+                   }       
+               }
+           }*/ }
         .sectionMenu form .form__block fieldset legend {
           font-size: 16px; }
-        .sectionMenu form .form__block fieldset .fieldset__card {
-          width: 100%;
-          font-size: 14px; }
-          .sectionMenu form .form__block fieldset .fieldset__card div {
-            margin: 18px;
-            width: 100%; }
-            .sectionMenu form .form__block fieldset .fieldset__card div h2 {
-              font-size: 14px; }
 
   footer {
     display: flex;
@@ -238,15 +248,14 @@ footer {
     justify-content: center;
     align-items: center; }
     footer .footer__block {
-      width: 93%; }
+      width: 100%; }
       footer .footer__block .header__logo {
         justify-content: flex-start;
         color: white; }
         footer .footer__block .header__logo img {
-          width: 28%;
+          width: 150px;
           filter: invert(1); }
       footer .footer__block nav {
-        margin-top: 20px;
         color: white; }
         footer .footer__block nav ul {
           display: flex;
