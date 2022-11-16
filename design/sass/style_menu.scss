@@ -349,20 +349,71 @@ footer{
                     }
 
                     
-                 /*  .fieldset__card{
+                    .fieldset__card{
                         width: 100%;
                         font-size: 14px; 
-                        div{
-                            margin: 18px;
-                            width: 100%;
+                        .fieldset__card__infos{
+                            margin: 18px 0 18px 18px;
+                            width: 16vw;
+                            white-space: nowrap;
+                            overflow: hidden; 
                             h2{
-                                font-size: 14px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                font-size: 16px;
+                                margin-bottom: 10px;
                             }       
+                            p{
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                margin: 0;
+                                width: 100%;
+                                color: $greyDark;
+                                font-size: 14px;
+                            }
                         }
-                    }*/
+                    }
                 }
             }
         }
+/*
+        .fieldset__card{
+            @include baseFlexB(row wrap, space-between, center);
+            @extend %shadowBox;
+            width: 100%;
+            border-radius: 25px;
+            margin: 17px 0;
+            background-color: white;  
+            font-size: 18px;
+            .fieldset__card__infos{
+                margin: 18px 0 18px 18px;
+                width: 65vw / 82.2%;
+                h2{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }       
+                p{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    margin: 0;
+                    width: 100%;
+                    color: $greyDark;
+                    font-size: 16px;
+                }
+            }
+            .price{
+                color: $greyDark;
+                
+                width: 10%;
+                font-size: 17px;
+                font-weight: 600;
+                margin: 37px 15px 0 0;
+                margin-right: 15px;
+            }
+            
+        }*/
     }
 
     footer{
