@@ -1,37 +1,5 @@
 *{box-sizing: border-box;}
 
-//Mixins
-@mixin googleFonts($font){
-    @import url('https://fonts.googleapis.com/css2?family=#{$font}');
-}
-
-@mixin position-el($type,$top,$right,$bottom,$left){
-    position: $type;
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
-}
-
-@mixin baseFlexB($f-flow,$justify-c,$align-i){
-    display: flex;
-    flex-flow: $f-flow;
-    justify-content: $justify-c;
-    align-items: $align-i;
-}
-
-// Variables
-    // Couleurs Principales
-        $primaryColor: #9356DC;
-        $secondaryColor: #FF79DA;
-        $thirdColor: #99E2D0;
-
-    // Couleurs Neutres
-        $greyDark: #353535;
-        $greyMid: #dedede;
-        $greyBright: #f7f7f7;
-
-
 // Fonts Use
 @include googleFonts("Shrikhand");
 @include googleFonts("Shrikhand&display=swap");
@@ -39,12 +7,6 @@
 @include googleFonts ("Roboto:wght@900");
 @include googleFonts ("Roboto:wght@700");
 @include googleFonts ("Roboto:wght@500");
-
-// placeholders
-
-%shadowBox{
-    box-shadow: 2px 5px 10px 0px rgb(222, 222, 222);
-}
 
 
 /* Start GLOBAL */
@@ -180,7 +142,7 @@ main{
                 font-size: 18px;
                 .fieldset__card__infos{
                     margin: 18px 0 18px 18px;
-                    width: 65vw /*82.2%*/;
+                    width: 65vw;
                     white-space: nowrap;
                     overflow: hidden;
                     h2{
@@ -200,8 +162,6 @@ main{
                 }
                 .price{
                     color: $greyDark;
-                    
-                   /* width: 10%;*/
                     font-size: 17px;
                     font-weight: 600;
                     margin: 37px 15px 0 0;
@@ -313,7 +273,6 @@ footer{
             }
         }
     }
-
 }
 
 // End Responsive Tablets
@@ -332,7 +291,6 @@ footer{
     }
 
     .sectionMenu{
-       /* max-width: 1200px;*/
         .sectionMenu__entete{
             h1{
                 font-size: 24px;
@@ -376,44 +334,6 @@ footer{
                 }
             }
         }
-/*
-        .fieldset__card{
-            @include baseFlexB(row wrap, space-between, center);
-            @extend %shadowBox;
-            width: 100%;
-            border-radius: 25px;
-            margin: 17px 0;
-            background-color: white;  
-            font-size: 18px;
-            .fieldset__card__infos{
-                margin: 18px 0 18px 18px;
-                width: 65vw / 82.2%;
-                h2{
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    font-size: 18px;
-                    margin-bottom: 10px;
-                }       
-                p{
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    margin: 0;
-                    width: 100%;
-                    color: $greyDark;
-                    font-size: 16px;
-                }
-            }
-            .price{
-                color: $greyDark;
-                
-                width: 10%;
-                font-size: 17px;
-                font-weight: 600;
-                margin: 37px 15px 0 0;
-                margin-right: 15px;
-            }
-            
-        }*/
     }
 
     footer{

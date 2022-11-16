@@ -5,11 +5,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500");
-* {
-  box-sizing: border-box; }
-
 .sectionMenu .form__block fieldset .fieldset__card {
   box-shadow: 2px 5px 10px 0px #dedede; }
+
+* {
+  box-sizing: border-box; }
 
 /* Start GLOBAL */
 html {
@@ -61,7 +61,7 @@ header {
 .header__imgResto {
   width: 100%;
   height: 280px;
-  background-image: url(../../img/restaurants/à_la_française.jpg);
+  background-image: url(../../img/restaurants/la_note_enchantée.jpg);
   background-size: cover;
   background-position: 35%; }
 
@@ -133,7 +133,6 @@ main {
           font-size: 16px; }
       .sectionMenu .form__block fieldset .fieldset__card .price {
         color: #353535;
-        /* width: 10%;*/
         font-size: 17px;
         font-weight: 600;
         margin: 37px 15px 0 0;
@@ -217,77 +216,37 @@ footer {
   main {
     margin: -42px auto; }
 
-  .sectionMenu {
-    /* max-width: 1200px;*/
-    /*
-            .fieldset__card{
-                @include baseFlexB(row wrap, space-between, center);
-                @extend %shadowBox;
-                width: 100%;
-                border-radius: 25px;
-                margin: 17px 0;
-                background-color: white;  
-                font-size: 18px;
-                .fieldset__card__infos{
-                    margin: 18px 0 18px 18px;
-                    width: 65vw / 82.2%;
-                    h2{
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        font-size: 18px;
-                        margin-bottom: 10px;
-                    }       
-                    p{
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        margin: 0;
-                        width: 100%;
-                        color: $greyDark;
-                        font-size: 16px;
-                    }
-                }
-                .price{
-                    color: $greyDark;
-                    
-                    width: 10%;
-                    font-size: 17px;
-                    font-weight: 600;
-                    margin: 37px 15px 0 0;
-                    margin-right: 15px;
-                }
-                
-            }*/ }
-    .sectionMenu .sectionMenu__entete h1 {
-      font-size: 24px; }
-    .sectionMenu form .form__block {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-evenly;
-      align-items: flex-start; }
-      .sectionMenu form .form__block fieldset {
-        width: 30%; }
-        .sectionMenu form .form__block fieldset legend {
-          font-size: 16px; }
-        .sectionMenu form .form__block fieldset .fieldset__card {
-          width: 100%;
-          font-size: 14px; }
-          .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos {
-            margin: 18px 0 18px 18px;
-            width: 16vw;
-            white-space: nowrap;
-            overflow: hidden; }
-            .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos h2 {
-              text-overflow: ellipsis;
-              overflow: hidden;
-              font-size: 16px;
-              margin-bottom: 10px; }
-            .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos p {
-              text-overflow: ellipsis;
-              overflow: hidden;
-              margin: 0;
-              width: 100%;
-              color: #353535;
-              font-size: 14px; }
+  .sectionMenu .sectionMenu__entete h1 {
+    font-size: 24px; }
+  .sectionMenu form .form__block {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start; }
+    .sectionMenu form .form__block fieldset {
+      width: 30%; }
+      .sectionMenu form .form__block fieldset legend {
+        font-size: 16px; }
+      .sectionMenu form .form__block fieldset .fieldset__card {
+        width: 100%;
+        font-size: 14px; }
+        .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos {
+          margin: 18px 0 18px 18px;
+          width: 16vw;
+          white-space: nowrap;
+          overflow: hidden; }
+          .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos h2 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 16px;
+            margin-bottom: 10px; }
+          .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos p {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin: 0;
+            width: 100%;
+            color: #353535;
+            font-size: 14px; }
 
   footer {
     display: flex;
@@ -329,4 +288,4 @@ footer {
         footer .footer__block .commander button {
           font-size: 20px; } }
 
-/*# sourceMappingURL=style_menu.css.map */
+/*# sourceMappingURL=style_menu2.css.map */

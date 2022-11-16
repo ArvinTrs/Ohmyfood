@@ -61,7 +61,7 @@ header {
 .header__imgResto {
   width: 100%;
   height: 280px;
-  background-image: url(../../img/restaurants/la_palette_du_goût.jpg);
+  background-image: url(../../img/restaurants/à_la_française.jpg);
   background-size: cover;
   background-position: 35%; }
 
@@ -288,4 +288,4 @@ footer {
         footer .footer__block .commander button {
           font-size: 20px; } }
 
-/*# sourceMappingURL=style_menu1.css.map */
+/*# sourceMappingURL=style_menu3.css.map */
