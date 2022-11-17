@@ -216,25 +216,29 @@ body {
         .resto .resto__sectionCard article .resto__card__info .like {
           transform: scale(1, 1.2);
           background-color: transparent;
-          color: black;
           margin: 0 30px 20px 0;
           margin-right: 30px;
           font-weight: 50;
           font-size: 20px;
-          overflow: hidden;
-          transition: all .2s; }
-        .resto .resto__sectionCard article .resto__card__info .like::after {
-          content: "";
-          width: 70px;
-          height: 70px;
-          background: linear-gradient(190deg, white 3%, #9356dc 29%, #ff79da 72%);
-          position: absolute;
-          bottom: -70px;
-          right: -5px;
-          z-index: -1;
-          transition: all .2s; }
-        .resto .resto__sectionCard article .resto__card__info .like:hover::after {
-          bottom: -25px; }
+          position: relative; }
+          .resto .resto__sectionCard article .resto__card__info .like i {
+            position: absolute; }
+          .resto .resto__sectionCard article .resto__card__info .like .grad-heart {
+            color: transparent;
+            background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: opacity 200ms;
+            transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+            .resto .resto__sectionCard article .resto__card__info .like .grad-heart:hover {
+              opacity: 1; }
+          .resto .resto__sectionCard article .resto__card__info .like .nor-heart {
+            opacity: 1;
+            transition: opacity 200ms;
+            transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+            .resto .resto__sectionCard article .resto__card__info .like .nor-heart:hover {
+              opacity: 0; }
 
 footer {
   background-color: #353535; }

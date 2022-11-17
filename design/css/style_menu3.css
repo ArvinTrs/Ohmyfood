@@ -76,15 +76,39 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
-  font-family: "Shrikhand"; }
-  .sectionMenu .sectionMenu__entete h1 {
+  align-items: inherit;
+  font-family: "Shrikhand";
+  position: relative; }
+  .sectionMenu .sectionMenu__entete .sectionMenu__entete__info h1 {
     margin-left: 5px;
-    font-size: 1.6em; }
-  .sectionMenu .sectionMenu__entete i {
+    font-size: 24px;
+    width: 265px;
+    font-weight: normal; }
+  .sectionMenu .sectionMenu__entete .blockLike .like {
     font-size: 25px;
-    margin-right: 20px;
-    transform: scale(1.1, 1.3); }
+    transform: scale(1.1, 1.3);
+    position: relative;
+    bottom: 5px; }
+    .sectionMenu .sectionMenu__entete .blockLike .like i {
+      position: absolute;
+      right: 10px; }
+    .sectionMenu .sectionMenu__entete .blockLike .like .grad-heart {
+      color: transparent;
+      background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+      background-clip: text;
+      -webkit-background-clip: text;
+      opacity: 0;
+      transition: opacity 200ms;
+      transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+      .sectionMenu .sectionMenu__entete .blockLike .like .grad-heart:hover {
+        opacity: 1; }
+    .sectionMenu .sectionMenu__entete .blockLike .like .nor-heart {
+      opacity: 1;
+      transition: opacity 200ms;
+      transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+      .sectionMenu .sectionMenu__entete .blockLike .like .nor-heart:hover {
+        opacity: 0;
+        display: none; }
 .sectionMenu .form__block {
   display: flex;
   flex-flow: column nowrap;
