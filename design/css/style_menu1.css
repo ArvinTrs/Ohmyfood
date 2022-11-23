@@ -61,7 +61,6 @@ header {
 .header__imgResto {
   width: 100%;
   height: 280px;
-  background-image: url(../../img/restaurants/la_palette_du_goût.jpg);
   background-size: cover;
   background-position: 35%; }
 
@@ -134,33 +133,102 @@ main {
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      /*  height: 80px;*/
       border-radius: 25px;
       margin: 17px 0;
       background-color: white;
-      font-size: 18px; }
-      .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__infos {
-        margin: 18px 0 18px 18px;
-        width: 65vw;
-        white-space: nowrap;
-        overflow: hidden; }
-        .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__infos h2 {
-          text-overflow: ellipsis;
+      font-size: 18px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(-5%);
+      animation: load-opacity 1000ms forwards 200ms; }
+      .sectionMenu .form__block fieldset .fieldset__card-1 {
+        animation-delay: 200ms; }
+      .sectionMenu .form__block fieldset .fieldset__card-2 {
+        animation-delay: 400ms; }
+      .sectionMenu .form__block fieldset .fieldset__card-3 {
+        animation-delay: 600ms; }
+      .sectionMenu .form__block fieldset .fieldset__card-4 {
+        animation-delay: 800ms; }
+      .sectionMenu .form__block fieldset .fieldset__card-5 {
+        animation-delay: 1000ms; }
+      .sectionMenu .form__block fieldset .fieldset__card-6 {
+        animation-delay: 1200ms; }
+      .sectionMenu .form__block fieldset .fieldset__card-7 {
+        animation-delay: 1400ms; }
+      .sectionMenu .form__block fieldset .fieldset__card-8 {
+        animation-delay: 1600ms; }
+      .sectionMenu .form__block fieldset .fieldset__card-9 {
+        animation-delay: 1800ms; }
+      .sectionMenu .form__block fieldset .fieldset__card:hover .checkBlock {
+        transform: translateX(0); }
+      .sectionMenu .form__block fieldset .fieldset__card:hover .fa-circle-check {
+        transform: rotate(0);
+        animation: 350ms cubic-bezier(0.17, 0.44, 0.74, 0.98) 50ms 1 forwards check-rotate; }
+      .sectionMenu .form__block fieldset .fieldset__card:hover .fieldset__card__infos {
+        padding-right: 80px; }
+      .sectionMenu .form__block fieldset .fieldset__card:hover .price {
+        transform: translateX(-122%); }
+      .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__content {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; }
+        .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__content .fieldset__card__infos {
+          margin: 18px 0 18px 18px;
+          width: 63.5vw;
+          white-space: nowrap;
           overflow: hidden;
-          font-size: 18px;
-          margin-bottom: 10px; }
-        .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__infos p {
-          text-overflow: ellipsis;
-          overflow: hidden;
-          margin: 0;
-          width: 100%;
+          transition: padding-right 350ms 50ms; }
+          .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__content .fieldset__card__infos h2 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 18px;
+            margin-bottom: 10px; }
+          .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__content .fieldset__card__infos p {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin: 0;
+            width: 100%;
+            color: #353535;
+            font-size: 16px; }
+        .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__content .price {
           color: #353535;
-          font-size: 16px; }
-      .sectionMenu .form__block fieldset .fieldset__card .price {
-        color: #353535;
-        font-size: 17px;
-        font-weight: 600;
-        margin: 37px 15px 0 0;
-        margin-right: 15px; }
+          font-size: 17px;
+          font-weight: 600;
+          padding: 37px 25px 8px 12px;
+          transition: transform 350ms ease-in-out; }
+      .sectionMenu .form__block fieldset .fieldset__card .checkBlock {
+        height: 100%;
+        padding: 28px;
+        background-color: #99E2D0;
+        color: white;
+        position: absolute;
+        right: 0;
+        transform: translateX(105%);
+        transition: transform 350ms ease-in-out; }
+        .sectionMenu .form__block fieldset .fieldset__card .checkBlock .fa-circle-check {
+          font-size: 20px;
+          font-weight: bolder;
+          background-color: white;
+          padding: 5px;
+          border-radius: 50%;
+          color: #99E2D0; }
+@keyframes check-rotate {
+  0% {
+    transform: rotate(-360deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes load-opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(7%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
 .sectionMenu .commander {
   display: flex;
   flex-flow: row wrap;
@@ -225,7 +293,7 @@ footer {
 
   main {
     margin: -42px auto;
-    width: 80%; }
+    width: 88%; }
 
   footer .footer__block {
     width: 84%;
@@ -254,17 +322,17 @@ footer {
       .sectionMenu form .form__block fieldset .fieldset__card {
         width: 100%;
         font-size: 14px; }
-        .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos {
+        .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__content .fieldset__card__infos {
           margin: 18px 0 18px 18px;
-          width: 16vw;
+          width: 19vw;
           white-space: nowrap;
           overflow: hidden; }
-          .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos h2 {
+          .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__content .fieldset__card__infos h2 {
             text-overflow: ellipsis;
             overflow: hidden;
             font-size: 16px;
             margin-bottom: 10px; }
-          .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos p {
+          .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__content .fieldset__card__infos p {
             text-overflow: ellipsis;
             overflow: hidden;
             margin: 0;
@@ -311,5 +379,7 @@ footer {
         width: 100%; }
         footer .footer__block .commander button {
           font-size: 20px; } }
+.header__imgResto {
+  background-image: url(../../img/restaurants/la_palette_du_goût.jpg); }
 
 /*# sourceMappingURL=style_menu1.css.map */

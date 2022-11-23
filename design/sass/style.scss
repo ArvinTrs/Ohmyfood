@@ -78,6 +78,27 @@ body{
 /* End GLOBAL */
 
 // Start Mobile Version - BODY
+
+.page_loader{
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background-color: $primaryColor;
+    height: 100vh;
+    opacity: 0.97;
+    animation: loader 3s 4s both;
+}
+
+@keyframes loader {
+    from {
+        opacity: 0.97;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 // Start Header
 
 .header__back-btn{

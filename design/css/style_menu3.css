@@ -1,315 +1,57 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500");
-.sectionMenu .form__block fieldset .fieldset__card {
-  box-shadow: 2px 5px 10px 0px #dedede; }
+/*
+Error: File to import not found or unreadable: _variables.
+       Load path: C:/wamp64/www/OhMyFood_Maquette/design/sass
+        on line 1 of C:/wamp64/www/OhMyFood_Maquette/design/sass/style_menu3.scss
 
-* {
-  box-sizing: border-box; }
+1: @import "_variables";
+2: @import "_mixins.scss";
+3: @import "_placeholders";
+4: @import "_general-menu";
+5: @import "_head-img3";
 
-/* Start GLOBAL */
-html {
-  font-size: 62.5%; }
-
-body {
-  font-family: "Roboto";
-  font-size: 18px; }
-  body h1, body h2, body h3 {
-    font-size: 3vw;
-    margin: 0; }
-  body a {
-    text-decoration: none;
-    color: black;
-    font-size: 80%; }
-  body label {
-    position: absolute;
-    left: -1999px; }
-  body input[type="checkbox"] {
-    position: absolute;
-    left: -999px; }
-  body ul, body ol {
-    list-style-type: none; }
-  body img {
-    width: 100%; }
-
-/* End GLOBAL */
-header {
-  width: 100%; }
-
-.header-block {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  position: relative; }
-  .header-block .header-block__back-btn {
-    font-size: 25px;
-    color: #353535;
-    margin: 10px 20px 0 20px;
-    position: absolute;
-    left: 5px;
-    top: 30%; }
-
-.header-block__logo a img {
-  width: 200px;
-  margin: 30px 0 18px 0; }
-
-.header__imgResto {
-  width: 100%;
-  height: 280px;
-  background-image: url(../../img/restaurants/à_la_française.jpg);
-  background-size: cover;
-  background-position: 35%; }
-
-main {
-  background-color: #f7f7f7;
-  border-radius: 63px 63px 0 0;
-  margin-top: -57px;
-  padding: 50px 18px 30px 18px;
-  z-index: 1; }
-
-.sectionMenu .sectionMenu__entete {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: inherit;
-  font-family: "Shrikhand";
-  position: relative; }
-  .sectionMenu .sectionMenu__entete .sectionMenu__entete__info h1 {
-    margin-left: 5px;
-    font-size: 24px;
-    width: 265px;
-    font-weight: normal; }
-  .sectionMenu .sectionMenu__entete .blockLike .like {
-    font-size: 25px;
-    transform: scale(1.1, 1.3);
-    position: relative;
-    bottom: 5px; }
-    .sectionMenu .sectionMenu__entete .blockLike .like i {
-      position: absolute;
-      right: 10px; }
-    .sectionMenu .sectionMenu__entete .blockLike .like .grad-heart {
-      color: transparent;
-      background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-      background-clip: text;
-      -webkit-background-clip: text;
-      opacity: 0;
-      transition: opacity 200ms;
-      transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
-      .sectionMenu .sectionMenu__entete .blockLike .like .grad-heart:hover {
-        opacity: 1; }
-    .sectionMenu .sectionMenu__entete .blockLike .like .nor-heart {
-      opacity: 1;
-      transition: opacity 200ms;
-      transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
-      .sectionMenu .sectionMenu__entete .blockLike .like .nor-heart:hover {
-        opacity: 0;
-        display: none; }
-.sectionMenu .form__block {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start; }
-  .sectionMenu .form__block fieldset {
-    margin-top: 50px;
-    padding: 0;
-    width: 100%;
-    border: none; }
-    .sectionMenu .form__block fieldset legend {
-      color: #353535;
-      font-size: 20px;
-      text-transform: uppercase; }
-    .sectionMenu .form__block fieldset .underline {
-      background-color: #99E2D0;
-      margin-top: 6px;
-      width: 65px;
-      height: 4px; }
-    .sectionMenu .form__block fieldset .fieldset__card {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      border-radius: 25px;
-      margin: 17px 0;
-      background-color: white;
-      font-size: 18px; }
-      .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__infos {
-        margin: 18px 0 18px 18px;
-        width: 65vw;
-        white-space: nowrap;
-        overflow: hidden; }
-        .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__infos h2 {
-          text-overflow: ellipsis;
-          overflow: hidden;
-          font-size: 18px;
-          margin-bottom: 10px; }
-        .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__infos p {
-          text-overflow: ellipsis;
-          overflow: hidden;
-          margin: 0;
-          width: 100%;
-          color: #353535;
-          font-size: 16px; }
-      .sectionMenu .form__block fieldset .fieldset__card .price {
-        color: #353535;
-        font-size: 17px;
-        font-weight: 600;
-        margin: 37px 15px 0 0;
-        margin-right: 15px; }
-.sectionMenu .commander {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%; }
-  .sectionMenu .commander button {
-    font-size: 17px;
-    border: none;
-    background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
-    border-radius: 50px;
-    padding: 19px 61px;
-    margin: 45px 0 50px 0;
-    color: white;
-    box-shadow: 2px 5px 10px 0px #b6b6b6;
-    transform: scale(1);
-    transition: transform 400ms;
-    cursor: pointer; }
-    .sectionMenu .commander button:hover {
-      background-image: linear-gradient(to bottom, #fb74d5, #ad79ed);
-      box-shadow: 2px 7px 10px 0px #a0a0a0;
-      transition: all 0.3s;
-      transform: scale(1.1); }
-
-footer {
-  width: 100%;
-  padding: 25px;
-  background-color: #353535;
-  padding: auto; }
-  footer .footer__block {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: flex-start; }
-    footer .footer__block .header__logo {
-      justify-content: flex-start;
-      color: white; }
-      footer .footer__block .header__logo img {
-        width: 110px;
-        filter: invert(1); }
-    footer .footer__block nav {
-      color: white; }
-      footer .footer__block nav ul {
-        display: flex;
-        flex-flow: column wrap;
-        padding-left: 0;
-        padding-bottom: 30px; }
-        footer .footer__block nav ul li {
-          margin-bottom: 5px; }
-          footer .footer__block nav ul li i {
-            font-size: 16px;
-            margin-right: 5px; }
-          footer .footer__block nav ul li a {
-            font-size: 16px;
-            color: white; }
-            footer .footer__block nav ul li a:hover {
-              text-decoration: underline; }
-
-@media only screen and (min-width: 768px) {
-  .header__imgResto {
-    border-radius: 0 0 32px 32px; }
-
-  main {
-    margin: -42px auto;
-    width: 80%; }
-
-  footer .footer__block {
-    width: 84%;
-    margin: auto; }
-    footer .footer__block .header__logo img {
-      width: 150px; } }
-@media only screen and (min-width: 992px) {
-  .header__imgResto {
-    border-radius: 0 0 32px 32px;
-    height: 485px; }
-
-  main {
-    margin: -42px auto; }
-
-  .sectionMenu .sectionMenu__entete h1 {
-    font-size: 24px; }
-  .sectionMenu form .form__block {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: flex-start; }
-    .sectionMenu form .form__block fieldset {
-      width: 30%; }
-      .sectionMenu form .form__block fieldset legend {
-        font-size: 16px; }
-      .sectionMenu form .form__block fieldset .fieldset__card {
-        width: 100%;
-        font-size: 14px; }
-        .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos {
-          margin: 18px 0 18px 18px;
-          width: 16vw;
-          white-space: nowrap;
-          overflow: hidden; }
-          .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos h2 {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            font-size: 16px;
-            margin-bottom: 10px; }
-          .sectionMenu form .form__block fieldset .fieldset__card .fieldset__card__infos p {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            margin: 0;
-            width: 100%;
-            color: #353535;
-            font-size: 14px; }
-
-  footer {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center; }
-    footer .footer__block {
-      width: 100%; }
-      footer .footer__block .header__logo {
-        justify-content: flex-start;
-        color: white; }
-        footer .footer__block .header__logo img {
-          width: 150px;
-          filter: invert(1); }
-      footer .footer__block nav {
-        color: white; }
-        footer .footer__block nav ul {
-          display: flex;
-          flex-flow: row wrap;
-          padding-left: 0;
-          padding-bottom: 30px; }
-          footer .footer__block nav ul li {
-            margin-bottom: 5px;
-            margin-right: 30px; }
-            footer .footer__block nav ul li i {
-              font-size: 16px;
-              margin-right: 5px; }
-            footer .footer__block nav ul li a {
-              font-size: 16px;
-              color: white; }
-              footer .footer__block nav ul li a:hover {
-                text-decoration: underline; }
-      footer .footer__block .commander {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%; }
-        footer .footer__block .commander button {
-          font-size: 20px; } }
-
-/*# sourceMappingURL=style_menu3.css.map */
+Backtrace:
+C:/wamp64/www/OhMyFood_Maquette/design/sass/style_menu3.scss:1
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:294:in `watch'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/plugin.rb:109:in `method_missing'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Ruby31-x64/bin/sass:32:in `load'
+C:/Ruby31-x64/bin/sass:32:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: _variables.\A        Load path: C:/wamp64/www/OhMyFood_Maquette/design/sass\A         on line 1 of C:/wamp64/www/OhMyFood_Maquette/design/sass/style_menu3.scss\A \A 1: @import \"_variables\";\A 2: @import \"_mixins.scss\";\A 3: @import \"_placeholders\";\A 4: @import \"_general-menu\";\A 5: @import \"_head-img3\";"; }

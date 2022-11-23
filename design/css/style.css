@@ -33,6 +33,20 @@ body {
     width: 100%; }
 
 /* End GLOBAL */
+.page_loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-color: #9356DC;
+  height: 100vh;
+  opacity: 0.97;
+  animation: loader 3s 4s both; }
+
+@keyframes loader {
+  from {
+    opacity: 0.97; }
+  to {
+    opacity: 0; } }
 .header__back-btn {
   display: none; }
 
