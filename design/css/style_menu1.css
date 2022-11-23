@@ -99,13 +99,13 @@ main {
       opacity: 0;
       transition: opacity 200ms;
       transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
-      .sectionMenu .sectionMenu__entete .blockLike .like .grad-heart:hover {
+      .sectionMenu .sectionMenu__entete .blockLike .like .grad-heart:active {
         opacity: 1; }
     .sectionMenu .sectionMenu__entete .blockLike .like .nor-heart {
       opacity: 1;
       transition: opacity 200ms;
       transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
-      .sectionMenu .sectionMenu__entete .blockLike .like .nor-heart:hover {
+      .sectionMenu .sectionMenu__entete .blockLike .like .nor-heart:active {
         opacity: 0;
         display: none; }
 .sectionMenu .form__block {
