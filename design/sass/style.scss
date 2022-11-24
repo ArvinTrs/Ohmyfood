@@ -90,10 +90,22 @@ body{
     height: 100vh;
     opacity: 0.97;
     animation: loader 2s 2s both, z-index-load 2s 3s both;
-    &__block{
+    .spinner-block{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 10px solid transparent;
+        border-top-color: $thirdColor;
+        border-bottom-color: $secondaryColor;
+        animation: spinner 4s linear infinite;
+    }    
+    .page-loader__block{
         @include baseFlexB (row wrap, center, center);
         width: fit-content;
         height: fit-content;
+        margin-top: 30px;
         .fa-bowl-food{
             font-size: 30px;
             color: white;
@@ -110,7 +122,7 @@ body{
         }
     }
     
-    &__block2{
+    .page-loader__block2{
         @include baseFlexB (row wrap, center, center);
         .loader__word{
             font-family: "Shrikhand";
@@ -118,8 +130,18 @@ body{
             font-size: 26px;
             color: white;
             -webkit-animation: jello-horizontal 0.6s ease-out infinite both;
-	        animation: jello-horizontal 0.6s ease-out infinite both;
+            animation: jello-horizontal 0.6s ease-out infinite both;
         }
+    }
+}
+
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -200,7 +222,7 @@ body{
         z-index: 1;
     }
     100% {
-        z-index: 0;
+        z-index: -2;
     }
 }
 
@@ -287,7 +309,7 @@ body{
             &:hover{
                 background-image: linear-gradient(to bottom, #fb74d5, #ad79ed);
                 box-shadow: 2px 7px 10px 0px #a0a0a0;
-                transition: all 0.3s;
+                transition: all 1s;
                 transform: scale(1.10);
             }
         }
@@ -314,6 +336,7 @@ body{
         background-color: $greyBright;
         margin-bottom: 20px;
         border-radius: 25px;
+        user-select: none;
         &:last-child{
             background-color: #eee2ff;
             i{

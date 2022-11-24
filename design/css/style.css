@@ -45,28 +45,39 @@ body {
   height: 100vh;
   opacity: 0.97;
   animation: loader 2s 2s both, z-index-load 2s 3s both; }
-  .page-loader__block {
+  .page-loader .spinner-block {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top-color: #99E2D0;
+    border-bottom-color: #FF79DA;
+    animation: spinner 4s linear infinite; }
+  .page-loader .page-loader__block {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     width: fit-content;
-    height: fit-content; }
-    .page-loader__block .fa-bowl-food {
+    height: fit-content;
+    margin-top: 30px; }
+    .page-loader .page-loader__block .fa-bowl-food {
       font-size: 30px;
       color: white;
       margin: 0 15px;
       animation: loader-dot cubic-bezier(0, 0, 0.45, 0.98) infinite 0.3s alternate; }
-    .page-loader__block .dot2 {
+    .page-loader .page-loader__block .dot2 {
       animation-delay: 0.05s; }
-    .page-loader__block .dot3 {
+    .page-loader .page-loader__block .dot3 {
       animation-delay: 0.1s; }
-  .page-loader__block2 {
+  .page-loader .page-loader__block2 {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center; }
-    .page-loader__block2 .loader__word {
+    .page-loader .page-loader__block2 .loader__word {
       font-family: "Shrikhand";
       letter-spacing: 2px;
       font-size: 26px;
@@ -74,6 +85,11 @@ body {
       -webkit-animation: jello-horizontal 0.6s ease-out infinite both;
       animation: jello-horizontal 0.6s ease-out infinite both; }
 
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 @-webkit-keyframes jello-horizontal {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
@@ -127,7 +143,7 @@ body {
   0% {
     z-index: 1; }
   100% {
-    z-index: 0; } }
+    z-index: -2; } }
 @keyframes loader {
   from {
     opacity: 0.97; }
@@ -198,7 +214,7 @@ body {
     .enteteMain__present .enteteMain__btn:hover {
       background-image: linear-gradient(to bottom, #fb74d5, #ad79ed);
       box-shadow: 2px 7px 10px 0px #a0a0a0;
-      transition: all 0.3s;
+      transition: all 1s;
       transform: scale(1.1); }
 
 .func {
@@ -220,7 +236,8 @@ body {
   width: 95%;
   background-color: #f7f7f7;
   margin-bottom: 20px;
-  border-radius: 25px; }
+  border-radius: 25px;
+  user-select: none; }
   .func__rules__step:last-child {
     background-color: #eee2ff; }
     .func__rules__step:last-child i {
