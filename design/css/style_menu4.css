@@ -203,6 +203,7 @@ main {
             text-overflow: ellipsis;
             overflow: hidden;
             margin: 0;
+            padding-bottom: 4px;
             width: 100%;
             color: #353535;
             font-size: 14px; }
