@@ -8,7 +8,6 @@
 @include googleFonts ("Roboto:wght@700");
 @include googleFonts ("Roboto:wght@500");
 
-
 /* Start GLOBAL */
 
 html{font-size: 62.5%;}
@@ -119,7 +118,6 @@ main{
                 i{
                     position: absolute;
                     right: 10px;
-                    
                 } 
                 // Anim1
                 .grad-heart{
@@ -181,6 +179,19 @@ main{
                 opacity: 0;
                 transform: translateY(-5%);
                 animation: load-opacity 1000ms forwards 200ms;
+
+                @keyframes load-opacity {
+                    0%{
+                        opacity: 0;
+                        transform: translateY(7%);
+                    }
+
+                    100%{
+                        opacity: 1;
+                        transform: translateY(0%);
+                    }
+                }
+
                 @for $i from 1 through 9 {
                     &-#{$i} {
                         animation-delay: 200ms * $i;
@@ -190,16 +201,28 @@ main{
                     & .checkBlock{
                         transform: translateX(0);
                     }
-                    & .fa-circle-check{
-                        transform: rotate(0);
-                        animation: 350ms cubic-bezier(.17,.44,.74,.98) 50ms 1 forwards check-rotate;
+
+                    & .price{
+                        transform: translateX(-122%);
                     }
+
                     & .fieldset__card__infos{
                         padding-right: 80px;
                     }
 
-                    & .price{
-                        transform: translateX(-122%);
+                    & .fa-circle-check{
+                        transform: rotate(0);
+                        animation: 350ms cubic-bezier(.17,.44,.74,.98) 50ms 1 forwards check-rotate;
+                    }
+                    
+                }
+
+                @keyframes check-rotate { // AnimCheck
+                    0%{
+                        transform: rotate(-360deg);
+                    }
+                    100%{
+                        transform: rotate(360deg);
                     }
                 }
                 
@@ -211,7 +234,7 @@ main{
                         width: 63.5vw;
                         white-space: nowrap;
                         overflow: hidden;
-                        transition: padding-right 350ms 50ms ; // AnimCheckm
+                        transition: padding-right 350ms 50ms ;
                         h2{
                             text-overflow: ellipsis;
                             overflow: hidden;
@@ -233,7 +256,7 @@ main{
                         font-size: 17px;
                         font-weight: 600;
                         padding: 37px 25px 8px 12px;
-                        transition: transform 350ms ease-in-out; // AnimCheck
+                        transition: transform 350ms ease-in-out;
                     }
                 }
 
@@ -246,7 +269,7 @@ main{
                     position: absolute;
                     right: 0;
                     transform: translateX(105%);
-                    transition: transform 350ms ease-in-out; //AnimCheck
+                    transition: transform 350ms ease-in-out;
                     .fa-circle-check{
                         font-size: 20px;
                         font-weight: bolder;
@@ -254,27 +277,6 @@ main{
                         padding: 5px;
                         border-radius: 50%;
                         color: $thirdColor;
-                    }
-                }
-                
-                @keyframes check-rotate { // AnimCheck
-                    0%{
-                        transform: rotate(-360deg);
-                    }
-                    100%{
-                        transform: rotate(360deg);
-                    }
-                }
-
-                @keyframes load-opacity {
-                    0%{
-                        opacity: 0;
-                        transform: translateY(7%);
-                    }
-
-                    100%{
-                        opacity: 1;
-                        transform: translateY(0%);
                     }
                 }
             }

@@ -143,6 +143,13 @@ main {
       opacity: 0;
       transform: translateY(-5%);
       animation: load-opacity 1000ms forwards 200ms; }
+@keyframes load-opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(7%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
       .sectionMenu .form__block fieldset .fieldset__card-1 {
         animation-delay: 200ms; }
       .sectionMenu .form__block fieldset .fieldset__card-2 {
@@ -163,13 +170,18 @@ main {
         animation-delay: 1800ms; }
       .sectionMenu .form__block fieldset .fieldset__card:hover .checkBlock {
         transform: translateX(0); }
+      .sectionMenu .form__block fieldset .fieldset__card:hover .price {
+        transform: translateX(-122%); }
+      .sectionMenu .form__block fieldset .fieldset__card:hover .fieldset__card__infos {
+        padding-right: 80px; }
       .sectionMenu .form__block fieldset .fieldset__card:hover .fa-circle-check {
         transform: rotate(0);
         animation: 350ms cubic-bezier(0.17, 0.44, 0.74, 0.98) 50ms 1 forwards check-rotate; }
-      .sectionMenu .form__block fieldset .fieldset__card:hover .fieldset__card__infos {
-        padding-right: 80px; }
-      .sectionMenu .form__block fieldset .fieldset__card:hover .price {
-        transform: translateX(-122%); }
+@keyframes check-rotate {
+  0% {
+    transform: rotate(-360deg); }
+  100% {
+    transform: rotate(360deg); } }
       .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__content {
         display: flex;
         flex-flow: row nowrap;
@@ -216,18 +228,6 @@ main {
           padding: 5px;
           border-radius: 50%;
           color: #99E2D0; }
-@keyframes check-rotate {
-  0% {
-    transform: rotate(-360deg); }
-  100% {
-    transform: rotate(360deg); } }
-@keyframes load-opacity {
-  0% {
-    opacity: 0;
-    transform: translateY(7%); }
-  100% {
-    opacity: 1;
-    transform: translateY(0%); } }
 .sectionMenu .commander {
   display: flex;
   flex-flow: row wrap;
