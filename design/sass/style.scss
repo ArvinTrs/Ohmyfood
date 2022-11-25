@@ -1,8 +1,8 @@
 *{box-sizing: border-box;}
 
-@import "_variables";
-@import "_mixins";
-@import "_placeholders";
+@import "./fonction_sass/variables";
+@import "./fonction_sass/mixins";
+@import "./fonction_sass/placeholders";
 
 // Fonts Use
 @include googleFonts("Shrikhand");
