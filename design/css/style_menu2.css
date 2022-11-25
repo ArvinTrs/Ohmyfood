@@ -120,7 +120,7 @@ main {
     border: none; }
     .sectionMenu .form__block fieldset legend {
       color: #353535;
-      font-size: 20px;
+      font-size: 18px;
       text-transform: uppercase; }
     .sectionMenu .form__block fieldset .underline {
       background-color: #99E2D0;
@@ -133,11 +133,10 @@ main {
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      /*  height: 80px;*/
       border-radius: 25px;
       margin: 17px 0;
       background-color: white;
-      font-size: 18px;
+      font-size: 16px;
       overflow: hidden;
       position: relative;
       cursor: pointer;
@@ -186,7 +185,7 @@ main {
           .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__content .fieldset__card__infos h2 {
             text-overflow: ellipsis;
             overflow: hidden;
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: 10px; }
           .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__content .fieldset__card__infos p {
             text-overflow: ellipsis;
@@ -194,7 +193,7 @@ main {
             margin: 0;
             width: 100%;
             color: #353535;
-            font-size: 16px; }
+            font-size: 14px; }
         .sectionMenu .form__block fieldset .fieldset__card .fieldset__card__content .price {
           color: #353535;
           font-size: 17px;
@@ -250,8 +249,8 @@ main {
     .sectionMenu .commander button:hover {
       background-image: linear-gradient(to bottom, #fb74d5, #ad79ed);
       box-shadow: 2px 7px 10px 0px #a0a0a0;
-      transition: all 0.3s;
-      transform: scale(1.1); }
+      transition: all ease-in-out 0.5s;
+      transform: scale(1.05); }
 
 footer {
   width: 100%;
@@ -308,8 +307,11 @@ footer {
   main {
     margin: -42px auto; }
 
-  .sectionMenu .sectionMenu__entete h1 {
-    font-size: 28px; }
+  .sectionMenu .sectionMenu__entete .blockLike .like .grad-heart:hover {
+    opacity: 1; }
+  .sectionMenu .sectionMenu__entete .blockLike .like .nor-heart:hover {
+    opacity: 0;
+    display: none; }
   .sectionMenu form .form__block {
     display: flex;
     flex-flow: row wrap;
