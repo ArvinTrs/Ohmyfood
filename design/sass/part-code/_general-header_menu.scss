@@ -36,6 +36,12 @@
 }
 
 @media only screen and (min-width : 768px) {
+    .header__imgResto{
+        border-radius: 0 0 32px 32px;
+    }
+}
+
+@media only screen and (min-width : 768px) {
     .header-block__logo{
         @include baseFlexB(row wrap,center, center);
         a{
@@ -46,12 +52,7 @@
             }
         }
     }
-
-    .header__imgResto{
-        border-radius: 0 0 32px 32px;
-    }
 }
-
 
 
 

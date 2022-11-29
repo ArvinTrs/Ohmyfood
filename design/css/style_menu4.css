@@ -306,6 +306,9 @@ main {
   background-position: 35%; }
 
 @media only screen and (min-width: 768px) {
+  .header__imgResto {
+    border-radius: 0 0 32px 32px; } }
+@media only screen and (min-width: 768px) {
   .header-block__logo {
     display: flex;
     flex-flow: row wrap;
@@ -315,10 +318,7 @@ main {
       width: 315px; }
       .header-block__logo a img {
         width: 100%;
-        margin: 23px 0 12px 0; }
-
-  .header__imgResto {
-    border-radius: 0 0 32px 32px; } }
+        margin: 23px 0 12px 0; } }
 @media only screen and (min-width: 992px) {
   .header__imgResto {
     border-radius: 0 0 32px 32px;
