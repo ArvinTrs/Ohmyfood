@@ -9,6 +9,166 @@
 .func__rules__step, .resto .resto__sectionCard article {
   box-shadow: 2px 5px 10px 0px #dedede; }
 
+.header__back-btn {
+  display: none; }
+
+.header-block {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .header-block .header-block__back-btn {
+    font-size: 25px;
+    color: #353535;
+    margin: 10px 20px 0 20px;
+    position: absolute;
+    left: 5px;
+    top: 20%; }
+
+.header-block__logo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; }
+  .header-block__logo a {
+    width: 47%; }
+    .header-block__logo a img {
+      width: 100%;
+      margin: 23px 0 12px 0; }
+
+@media only screen and (min-width: 768px) {
+  .header-block__logo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; }
+    .header-block__logo a {
+      width: 315px; }
+      .header-block__logo a img {
+        width: 100%;
+        margin: 23px 0 12px 0; } }
+/*
+// Version MENU
+
+// Start Header
+
+
+.header-block{
+    @include baseFlexB(row wrap, center, center);
+    position: relative;
+    .header-block__back-btn{
+        font-size: 25px;
+        color: $greyDark;
+        margin: 10px 20px 0 20px;
+        position: absolute;
+        left: 5px;
+        top: 20%;
+    }
+}
+
+.header-block__logo{
+    @include baseFlexB(row wrap,center, center);
+    a{
+        width: 47%;
+        img{
+            width: 100%;
+            margin: 23px 0 12px 0;
+        }
+    }
+}
+
+.header__imgResto{
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+    background-position: 35%;
+}
+
+@media only screen and (min-width : 768px) {
+    .header__imgResto{
+        border-radius: 0 0 32px 32px;
+    }
+}
+
+@media only screen and (min-width : 992px) {
+    .header__imgResto{
+        border-radius: 0 0 32px 32px;
+        height: 485px;
+    }
+}*/
+footer {
+  width: 100%;
+  padding: 25px;
+  background-color: #353535;
+  padding: auto; }
+  footer .footer__block {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    footer .footer__block .header__logo {
+      justify-content: flex-start;
+      color: white; }
+      footer .footer__block .header__logo img {
+        width: 110px;
+        filter: invert(1); }
+    footer .footer__block nav {
+      color: white; }
+      footer .footer__block nav ul {
+        display: flex;
+        flex-flow: column wrap;
+        padding-left: 0;
+        padding-bottom: 30px; }
+        footer .footer__block nav ul li {
+          margin-bottom: 5px; }
+          footer .footer__block nav ul li i {
+            font-size: 16px;
+            margin-right: 5px; }
+          footer .footer__block nav ul li a {
+            font-size: 16px;
+            color: white; }
+            footer .footer__block nav ul li a:hover {
+              text-decoration: underline; }
+
+@media only screen and (min-width: 768px) {
+  footer .footer__block {
+    width: 84%;
+    margin: auto; }
+    footer .footer__block .header__logo img {
+      width: 150px; } }
+@media only screen and (min-width: 992px) {
+  footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center; }
+    footer .footer__block {
+      width: 100%; }
+      footer .footer__block .header__logo {
+        justify-content: flex-start;
+        color: white; }
+        footer .footer__block .header__logo img {
+          width: 150px;
+          filter: invert(1); }
+      footer .footer__block nav {
+        color: white; }
+        footer .footer__block nav ul {
+          display: flex;
+          flex-flow: row wrap;
+          padding-left: 0;
+          padding-bottom: 30px; }
+          footer .footer__block nav ul li {
+            margin-bottom: 5px;
+            margin-right: 30px; }
+            footer .footer__block nav ul li i {
+              font-size: 16px;
+              margin-right: 5px; }
+            footer .footer__block nav ul li a {
+              font-size: 16px;
+              color: white; }
+              footer .footer__block nav ul li a:hover {
+                text-decoration: underline; } }
 /* Start GLOBAL */
 html {
   font-size: 62.5%; }
@@ -57,8 +217,8 @@ body {
     opacity: 0; } }
   .page-loader .page-loader__circle-spin {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
     background-color: transparent;
     border-radius: 50%;
     border: 10px solid transparent;
@@ -79,7 +239,7 @@ body {
     height: fit-content;
     margin-top: 30px; }
     .page-loader .page-loader__dots .fa-bowl-food {
-      font-size: 30px;
+      font-size: 28px;
       color: white;
       margin: 0 15px;
       animation: loader-dot cubic-bezier(0, 0, 0.45, 0.98) infinite 0.3s alternate; }
@@ -92,17 +252,12 @@ body {
     transform: translateY(0); }
   100% {
     transform: translateY(-30px); } }
-  .page-loader .page-loader__loader-word {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center; }
-    .page-loader .page-loader__loader-word .loader-word {
-      font-family: "Shrikhand";
-      letter-spacing: 2px;
-      font-size: 26px;
-      color: white;
-      animation: jello-horizontal 0.6s ease-out infinite both; }
+  .page-loader .page-loader__loader-word .loader-word {
+    font-family: "Shrikhand";
+    letter-spacing: 2px;
+    font-size: 25px;
+    color: white;
+    animation: jello-horizontal 0.6s ease-out infinite both; }
 @keyframes jello-horizontal {
   0% {
     transform: scale3d(1, 1, 1); }
@@ -118,20 +273,6 @@ body {
     transform: scale3d(1.05, 0.95, 1); }
   100% {
     transform: scale3d(1, 1, 1); } }
-.header__back-btn {
-  display: none; }
-
-.header__logo {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center; }
-  .header__logo a {
-    width: 47%; }
-    .header__logo a img {
-      width: 100%;
-      margin: 23px 0 12px 0; }
-
 .enteteMain {
   background-color: #f7f7f7; }
 
@@ -327,38 +468,6 @@ body {
             .resto .resto__sectionCard article .resto__card__info .like .nor-heart:active {
               opacity: 0; }
 
-footer {
-  background-color: #353535; }
-  footer .header__logo {
-    justify-content: flex-start;
-    color: white; }
-    footer .header__logo img {
-      width: 25%;
-      margin: 20px 0 8px 15px;
-      filter: invert(1); }
-  footer nav {
-    margin: 15px 0 0 15px;
-    color: white; }
-    footer nav ul {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: space-between;
-      margin: 0;
-      padding-left: 0;
-      padding-bottom: 30px; }
-      footer nav ul li {
-        margin-bottom: 5px; }
-        footer nav ul li i {
-          font-size: 4vw;
-          margin-right: 5px; }
-        footer nav ul li .fa-handshake-angle {
-          margin: 0; }
-        footer nav ul li a {
-          font-size: 3.5vw;
-          color: white; }
-          footer nav ul li a:hover {
-            text-decoration: underline; }
-
 @media only screen and (min-width: 425px) {
   body {
     font-size: 16px; }
@@ -369,26 +478,10 @@ footer {
     font-size: inherit; }
 
   .resto .resto__sectionCard article .resto__card_ill img {
-    object-position: 50% 70%; }
-
-  footer nav ul li i {
-    font-size: 16px; }
-  footer nav ul li a {
-    font-size: 16px; } }
+    object-position: 50% 70%; } }
 @media only screen and (min-width: 768px) {
   body {
     background-color: #ffffff; }
-
-  .header__logo {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center; }
-    .header__logo a {
-      width: 315px; }
-      .header__logo a img {
-        width: 100%;
-        margin: 23px 0 12px 0; }
 
   .func {
     margin: auto;
@@ -403,10 +496,7 @@ footer {
     gap: 2vw; }
     .resto .resto__sectionCard article {
       margin: 0 0;
-      width: 48.9%; }
-
-  footer .header__logo img {
-    width: 153px; } }
+      width: 48.9%; } }
 @media only screen and (min-width: 992px) {
   .func {
     margin: auto;

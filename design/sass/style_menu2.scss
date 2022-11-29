@@ -1,5 +1,13 @@
+// Importation des Outils SASS
+
 @import "./fonction_sass/variables";
 @import "./fonction_sass/mixins";
 @import "./fonction_sass/placeholders";
+
+
+//Importation des Parties du code
+
 @import "./part-code/general-menu";
+@import "./part-code/general-header_menu";
+@import "./part-code/general-footer";
 @import "./part-code/head-img2";

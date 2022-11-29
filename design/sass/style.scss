@@ -1,8 +1,13 @@
 *{box-sizing: border-box;}
 
+// Importation des fonctions SASS
 @import "./fonction_sass/variables";
 @import "./fonction_sass/mixins";
 @import "./fonction_sass/placeholders";
+
+// Importation de partie du code
+@import "./part-code/general-header_index";
+@import "./part-code/general-footer";
 
 // Fonts Use
 @include googleFonts("Shrikhand");
@@ -78,8 +83,8 @@ body{
 
     .page-loader__circle-spin{ 
         position: absolute;
-        width: 300px;
-        height: 300px;
+        width: 270px;
+        height: 270px;
         background-color: transparent;
         border-radius: 50%;
         border: 10px solid transparent;
@@ -104,7 +109,7 @@ body{
         height: fit-content;
         margin-top: 30px;
         .fa-bowl-food{
-            font-size: 30px;
+            font-size: 28px;
             color: white;
             margin: 0 15px;
             animation: loader-dot cubic-bezier(0,0,.45,.98) infinite 0.3s alternate; 
@@ -128,11 +133,10 @@ body{
     }
     
     .page-loader__loader-word{
-        @include baseFlexB (row wrap, center, center);
         .loader-word{
             font-family: "Shrikhand";
             letter-spacing: 2px;
-            font-size: 26px;
+            font-size: 25px;
             color: white;
             animation: jello-horizontal 0.6s ease-out infinite both;
         }
@@ -165,24 +169,6 @@ body{
 
 // End Page loader
 
-// Start Header
-
-.header__back-btn{
-    display: none;
-}
-
-.header__logo{
-    @include baseFlexB(row wrap,center, center);
-    a{
-        width: 47%;
-        img{
-            width: 100%;
-            margin: 23px 0 12px 0;
-        }
-    }
-}
-
-// End Header
 
 // Start Main
 // Start enteteMain
@@ -386,7 +372,7 @@ body{
                             }
                             
                         }
-                                                // AnimCoeur
+                                              
                         .like{
                             transform: scale(1, 1.2);
                             background-color: transparent;
@@ -427,53 +413,6 @@ body{
         }
             
             // End Section resto
-            
-            // Start Footer
-            
-        footer{
-        background-color: #353535;
-
-            .header__logo{
-            justify-content: flex-start;
-            color: white;
-                img{
-                    width: 25%;
-                    margin: 20px 0 8px 15px;
-                    filter: invert(1);
-                }
-            }
-    
-        nav{
-            margin: 15px 0 0 15px;
-            color: white;
-            ul{
-                display: flex;
-                flex-flow: column wrap;
-                justify-content: space-between;
-                margin: 0;
-                padding-left: 0;
-                padding-bottom: 30px;
-                li{
-                    margin-bottom: 5px;
-                    i{
-                        font-size: 4vw;
-                        margin-right: 5px;
-                    }
-                    .fa-handshake-angle{margin: 0;}
-                    
-                    a{
-                        font-size: 3.5vw;
-                        color: white;
-                        &:hover{
-                            text-decoration: underline;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-// End Footer
 
 
 // Start Breakpoint Ajust Responsive Mobile
@@ -513,23 +452,6 @@ body{
 
 // End Main Ajust
 
-//Start Footer Ajust
-
-    footer{
-        nav{
-            ul{
-                li{
-                    i{
-                        font-size: 16px;
-                    }
-
-                    a{
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-    }
 }
 
 // End Breakpoint Ajust Responsive Mobile
@@ -542,16 +464,6 @@ body{
             background-color: #ffffff;
         }
         
-        .header__logo{
-            @include baseFlexB(row wrap,center, center);
-            a{
-                width: 315px;
-                img{
-                    width: 100%;
-                    margin: 23px 0 12px 0;
-                }
-            }
-        }
 
         .func{
             margin: auto;
@@ -561,20 +473,12 @@ body{
 
         .resto{
  
-                .resto__sectionCard{
-                    @include baseFlexB(row wrap, flex-start, baseline);
-                   gap: 2vw;
-                   article{
-                        margin: 0 0;
-                        width: 48.9%;
-                    }
-                }
-        }
-
-        footer{
-            .header__logo{
-                img{
-                    width: 153px;
+            .resto__sectionCard{
+                @include baseFlexB(row wrap, flex-start, baseline);
+                gap: 2vw;
+                article{
+                    margin: 0 0;
+                    width: 48.9%;
                 }
             }
         }
@@ -601,7 +505,7 @@ body{
                     article{
                         .resto__card__info{
                             .like{
-                                .grad-heart{            // AnimCoeur
+                                .grad-heart{           
                                     &:hover{
                                         opacity: 1;
                                     }

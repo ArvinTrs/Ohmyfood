@@ -1,0 +1,96 @@
+// Version index
+
+// Start Header
+
+.header__back-btn{
+    display: none;
+}
+
+.header-block{
+    @include baseFlexB(row wrap, center, center);
+    position: relative;
+    .header-block__back-btn{
+        font-size: 25px;
+        color: $greyDark;
+        margin: 10px 20px 0 20px;
+        position: absolute;
+        left: 5px;
+        top: 20%;
+    }
+}
+
+.header-block__logo{
+    @include baseFlexB(row wrap,center, center);
+    a{
+        width: 47%;
+        img{
+            width: 100%;
+            margin: 23px 0 12px 0;
+        }
+    }
+}
+
+@media only screen and (min-width : 768px) {
+    .header-block__logo{
+        @include baseFlexB(row wrap,center, center);
+        a{
+            width: 315px;
+            img{
+                width: 100%;
+                margin: 23px 0 12px 0;
+            }
+        }
+    }
+}
+
+
+
+/*
+// Version MENU
+
+// Start Header
+
+
+.header-block{
+    @include baseFlexB(row wrap, center, center);
+    position: relative;
+    .header-block__back-btn{
+        font-size: 25px;
+        color: $greyDark;
+        margin: 10px 20px 0 20px;
+        position: absolute;
+        left: 5px;
+        top: 20%;
+    }
+}
+
+.header-block__logo{
+    @include baseFlexB(row wrap,center, center);
+    a{
+        width: 47%;
+        img{
+            width: 100%;
+            margin: 23px 0 12px 0;
+        }
+    }
+}
+
+.header__imgResto{
+    width: 100%;
+    height: 280px;
+    background-size: cover;
+    background-position: 35%;
+}
+
+@media only screen and (min-width : 768px) {
+    .header__imgResto{
+        border-radius: 0 0 32px 32px;
+    }
+}
+
+@media only screen and (min-width : 992px) {
+    .header__imgResto{
+        border-radius: 0 0 32px 32px;
+        height: 485px;
+    }
+}*/
