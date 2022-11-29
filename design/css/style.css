@@ -43,9 +43,11 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center; }
-    .header-block__logo a img {
-      width: 100%;
-      margin: 23px 0 12px 0; } }
+    .header-block__logo a {
+      width: 315px; }
+      .header-block__logo a img {
+        width: 100%;
+        margin: 23px 0 12px 0; } }
 footer {
   width: 100%;
   padding: 25px;

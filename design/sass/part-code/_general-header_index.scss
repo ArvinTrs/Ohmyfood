@@ -34,6 +34,7 @@
     .header-block__logo{
         @include baseFlexB(row wrap,center, center);
         a{
+            width: 315px;
             img{
                 width: 100%;
                 margin: 23px 0 12px 0;
