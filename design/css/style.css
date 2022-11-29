@@ -84,8 +84,7 @@ footer {
 
 @media only screen and (min-width: 768px) {
   footer .footer__block {
-    width: 84%;
-    margin: auto; }
+    width: 84%; }
     footer .footer__block .header__logo img {
       width: 150px; } }
 @media only screen and (min-width: 992px) {
