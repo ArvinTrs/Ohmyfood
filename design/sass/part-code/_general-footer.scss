@@ -7,7 +7,6 @@ footer{
     width: 100%;
     padding: 25px;
     background-color: #353535;
-    padding: auto;
     .footer__block{
         @include baseFlexB(column wrap, flex-start, flex-start);
         .header__logo{
